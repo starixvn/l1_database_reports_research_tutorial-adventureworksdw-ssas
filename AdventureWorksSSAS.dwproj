@@ -6,6 +6,32 @@
     <Name>AdventureWorksSSAS.database</Name>
     <FullPath>AdventureWorksSSAS.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>AdventureWorksDW2022.cube</Name>
+      <FullPath>AdventureWorksDW2022.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>AdventureWorksDW2022.partitions</Name>
+          <FullPath>AdventureWorksDW2022.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Product.dim</Name>
+      <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>AdventureWorksDW2022.ds</Name>
@@ -26,7 +52,7 @@
           <ConfigurationSetting>
             <Id>AdventureWorksDW2022</Id>
             <Name>AdventureWorksDW2022</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=10.10.50.157;Integrated Security=SSPI;Initial Catalog=AdventureWorksDW2022</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=10.10.50.157;Integrated Security=SSPI;Initial Catalog=AdventureWorksDW2022</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

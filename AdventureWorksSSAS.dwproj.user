@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>10.10.50.157</TargetServer>
         <TargetDatabase>AdventureWorksSSAS</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
