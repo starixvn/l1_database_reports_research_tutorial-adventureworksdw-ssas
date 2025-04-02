@@ -5,7 +5,7 @@
     <ConnectionString>Data Source=10.10.50.157;Timeout=0</ConnectionString>
   </Target>
   <Options>
-    <TransactionalDeployment>false</TransactionalDeployment>
+    <TransactionalDeployment>true</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
     <ProcessingOption>Default</ProcessingOption>
@@ -26,35 +26,70 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>7a6/wzCABQFewm9SQSHetOiAFq4=2025-04-02 09:42:192025-04-01 09:18:03</TimeStamp>
+        <TimeStamp>K5+/lHE413o4tMhEhI7WF70F61U=2025-04-02 14:54:282025-04-01 09:18:03</TimeStamp>
         <ID>
           <String>AdventureWorksDW2022</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>tlxKTDWja8P94MRJ3RJNdsalX+o=2025-04-02 09:55:442025-04-01 09:34:48</TimeStamp>
+        <TimeStamp>J058hPENQbIME3MAnYYxpvM7g/0=2025-04-02 14:08:532025-04-01 09:34:48</TimeStamp>
         <ID>
           <String>Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>mYuVsgklGaNmKIbcSrjLEq5BORw=2025-04-01 17:52:202025-04-01 09:43:43</TimeStamp>
+        <TimeStamp>I9XQLpyNX87DkuChFGP5BM5vSgg=2025-04-02 14:16:082025-04-01 09:43:43</TimeStamp>
         <ID>
           <String>Product</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>y51gIAwwYUU8baReKYGzN2L6v4o=2025-04-01 15:31:522025-04-01 09:43:43</TimeStamp>
+        <TimeStamp>Wd5eYhOsBm+AxrdMKnHPrMI7pkQ=2025-04-02 15:36:182025-04-01 09:43:43</TimeStamp>
         <ID>
           <String>Customer</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>gxYuymHuNRpmS9uNVn71mqWI/aU=2025-04-02 15:50:472025-04-02 14:46:15</TimeStamp>
+        <ID>
+          <String>Geography</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>xv/M6T4w9vJjRA887u0QXl+s4Uc=2025-04-02 15:45:452025-04-02 14:53:15</TimeStamp>
+        <ID>
+          <String>Promotion</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>67UZ7G6rePYE11ObTP8WILnLPvQ=2025-04-02 15:08:312025-04-02 14:59:33</TimeStamp>
+        <ID>
+          <String>Reseller</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4w91vCcB5Ij32XLgclB+ArAWkn8=2025-04-02 15:10:502025-04-02 15:09:06</TimeStamp>
+        <ID>
+          <String>Sales Territory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>sq2HEj/Jdh2QYO3/5t/oad8mnFM=2025-04-02 15:31:362025-04-02 14:19:52</TimeStamp>
+        <ID>
+          <String>Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>sNX8UuAjPNVkOr2oHltg9p2wafQ=2025-04-02 09:51:082025-04-01 09:43:43GJ0Y150cwLuWZPznIdkIdbJp7mU=2025-04-01 09:43:432025-04-01 09:43:43</TimeStamp>
+        <TimeStamp>i4iOez5tzA6BWzM7uePGHKTaQwM=2025-04-02 15:25:222025-04-01 09:43:43wPDHBY/OHMcZO96bbL5NxFKC6O8=2025-04-02 15:23:322025-04-01 09:43:43</TimeStamp>
         <ID>
           <String>AdventureWorksDW2022</String>
         </ID>
@@ -71,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-04-02T02:55:49.7Z</LastDeployed>
+  <LastDeployed>2025-04-02T08:50:55.976667Z</LastDeployed>
 </DeploymentSnapshot>

@@ -9,6 +9,18 @@
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
         </StartObject>
+        <TransactionalDeployment>true</TransactionalDeployment>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>FullDevelopment</Name>
+      <Options>
+        <TargetServer>10.10.50.157</TargetServer>
+        <TargetDatabase>AdventureWorksSSAS</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
       </Options>
     </Configuration>
   </Configurations>

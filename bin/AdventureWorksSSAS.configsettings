@@ -20,6 +20,21 @@
       <Dimension>
         <ID>Customer</ID>
       </Dimension>
+      <Dimension>
+        <ID>Geography</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Promotion</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Reseller</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Sales Territory</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Employee</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
@@ -30,6 +45,14 @@
             <Partitions>
               <Partition>
                 <ID>Internet Sales</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Reseller Sales</ID>
+            <Partitions>
+              <Partition>
+                <ID>Reseller Sales</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>
