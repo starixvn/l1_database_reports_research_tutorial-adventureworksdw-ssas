@@ -19,6 +19,32 @@
       <Annotations>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2999" scrolltop="-4748" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10615" y="14521" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001653e0100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Date" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4577" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000e111000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -34,15 +60,15 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>0</Value>
+          <Value>-2999</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>0</Value>
+          <Value>-4748</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-          <Value>0</Value>
+          <Value>20</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -51,6 +77,45 @@
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
           <Value>100</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+          <Value>
+            <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+              <Shapes NodeWidth="181">
+                <Shape Id="Date Key" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Date Key" />
+                  </Attributes>
+                  <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="English Month Name" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="English Month Name" />
+                  </Attributes>
+                  <Position x="251" y="20" />
+                </Shape>
+                <Shape Id="Calendar Quarter" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Calendar Quarter" />
+                  </Attributes>
+                  <Position x="482" y="20" />
+                </Shape>
+                <Shape Id="Calendar Semester" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Calendar Semester" />
+                  </Attributes>
+                  <Position x="713" y="20" />
+                </Shape>
+                <Shape Id="Calendar Year" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Calendar Year" />
+                  </Attributes>
+                  <Position x="945" y="20" />
+                </Shape>
+              </Shapes>
+            </DiagramLayout>
+          </Value>
         </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
@@ -79,45 +144,21 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>4000</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>SimpleDate</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
-              <AttributeID>Full Date Alternate Key</AttributeID>
-              <Name>Full Date Alternate Key</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
               <AttributeID>English Month Name</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
               <Name>English Month Name</Name>
             </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Calendar Quarter</AttributeID>
-              <Name>Calendar Quarter</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Calendar Year</AttributeID>
-              <Name>Calendar Year</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Calendar Semester</AttributeID>
-              <Name>Calendar Semester</Name>
-            </AttributeRelationship>
           </AttributeRelationships>
-          <OrderBy>Key</OrderBy>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-        </Attribute>
-        <Attribute>
-          <ID>Full Date Alternate Key</ID>
-          <Name>Full Date Alternate Key</Name>
-          <Type>Date</Type>
-          <KeyColumns>
-            <KeyColumn>
-              <DataType>Date</DataType>
-              <Source xsi:type="ColumnBinding">
-                <TableID>dbo_DimDate</TableID>
-                <ColumnID>FullDateAlternateKey</ColumnID>
-              </Source>
-            </KeyColumn>
-          </KeyColumns>
           <OrderBy>Key</OrderBy>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -128,6 +169,13 @@
           <Type>Months</Type>
           <KeyColumns>
             <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimDate</TableID>
+                <ColumnID>CalendarYear</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
               <DataType>WChar</DataType>
               <DataSize>10</DataSize>
               <Source xsi:type="ColumnBinding">
@@ -136,6 +184,21 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>4000</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>MonthName</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Calendar Quarter</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
+              <Name>Calendar Quarter</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
           <OrderBy>Key</OrderBy>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -146,6 +209,13 @@
           <Type>Quarters</Type>
           <KeyColumns>
             <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimDate</TableID>
+                <ColumnID>CalendarYear</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
               <DataType>UnsignedTinyInt</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>dbo_DimDate</TableID>
@@ -153,6 +223,21 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>15</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>CalendarQuarterDesc</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Calendar Semester</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
+              <Name>Calendar Semester</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
           <OrderBy>Key</OrderBy>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -180,6 +265,13 @@
           <Type>HalfYears</Type>
           <KeyColumns>
             <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimDate</TableID>
+                <ColumnID>CalendarYear</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
               <DataType>UnsignedTinyInt</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>dbo_DimDate</TableID>
@@ -187,11 +279,59 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>15</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>CalendarSemesterDesc</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Calendar Year</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
+              <Name>Calendar Year</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
           <OrderBy>Key</OrderBy>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Calendar Date</Name>
+          <Levels>
+            <Level>
+              <ID>Calendar Year</ID>
+              <Name>Calendar Year</Name>
+              <SourceAttributeID>Calendar Year</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Calendar Semester</ID>
+              <Name>Calendar Semester</Name>
+              <SourceAttributeID>Calendar Semester</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Calendar Quarter</ID>
+              <Name>Calendar Quarter</Name>
+              <SourceAttributeID>Calendar Quarter</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>English Month Name</ID>
+              <Name>Calendar Month</Name>
+              <SourceAttributeID>English Month Name</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Date Key</ID>
+              <Name>Date</Name>
+              <SourceAttributeID>Date Key</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
       <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
     </Dimension>
     <Dimension>
@@ -204,7 +344,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3059" scrolltop="-5096" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10615" y="19433" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3059" scrolltop="-5096" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10615" y="14521" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001653e0100065461686f6d61" />
                 </font>
@@ -215,7 +355,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Product" left="-268" top="-5008" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4457" height="15088" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Product" left="-268" top="-5008" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4457" height="15088" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e000069110000f03a0000" />
                 </control>
@@ -261,6 +401,48 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
           <Value>100</Value>
         </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+          <Value>
+            <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+              <Shapes NodeWidth="171">
+                <Shape Id="Product Key" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Product Key" />
+                    <Attribute Id="Class" />
+                    <Attribute Id="Color" />
+                    <Attribute Id="Days To Manufacture" />
+                    <Attribute Id="Dealer Price" />
+                    <Attribute Id="End Date" />
+                    <Attribute Id="List Price" />
+                    <Attribute Id="Reorder Point" />
+                    <Attribute Id="Safety Stock Level" />
+                    <Attribute Id="Size" />
+                    <Attribute Id="Size Range" />
+                    <Attribute Id="Standard Cost" />
+                    <Attribute Id="Start Date" />
+                    <Attribute Id="Status" />
+                    <Attribute Id="Style" />
+                    <Attribute Id="Weight" />
+                  </Attributes>
+                  <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="Model Name" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Model Name" />
+                  </Attributes>
+                  <Position x="238" y="20" />
+                </Shape>
+                <Shape Id="Product Line" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Product Line" />
+                  </Attributes>
+                  <Position x="457" y="20" />
+                </Shape>
+              </Shapes>
+            </DiagramLayout>
+          </Value>
+        </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
@@ -276,7 +458,7 @@
       <Attributes>
         <Attribute>
           <ID>Product Key</ID>
-          <Name>Product Key</Name>
+          <Name>Product Name</Name>
           <Usage>Key</Usage>
           <KeyColumns>
             <KeyColumn>
@@ -287,6 +469,14 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimProduct</TableID>
+              <ColumnID>EnglishProductName</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
               <AttributeID>Standard Cost</AttributeID>
@@ -323,10 +513,6 @@
             <AttributeRelationship>
               <AttributeID>Days To Manufacture</AttributeID>
               <Name>Days To Manufacture</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Product Line</AttributeID>
-              <Name>Product Line</Name>
             </AttributeRelationship>
             <AttributeRelationship>
               <AttributeID>Dealer Price</AttributeID>
@@ -373,6 +559,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Financial</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -389,6 +576,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -404,6 +592,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -419,6 +608,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -434,6 +624,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Financial</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -450,6 +641,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -466,6 +658,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -481,6 +674,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -496,6 +690,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -512,6 +707,14 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>10</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimProduct</TableID>
+              <ColumnID>ProductLineName</ColumnID>
+            </Source>
+          </NameColumn>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -527,6 +730,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Financial</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -543,6 +747,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -559,6 +764,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Stocking</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -575,6 +781,12 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Product Line</AttributeID>
+              <Name>Product Line</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -590,6 +802,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>History</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -605,6 +818,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>History</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -621,10 +835,34 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>History</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Product Model Lines</Name>
+          <Levels>
+            <Level>
+              <ID>Product Line</ID>
+              <Name>Product Line</Name>
+              <SourceAttributeID>Product Line</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Model Name</ID>
+              <Name>Model Name</Name>
+              <SourceAttributeID>Model Name</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Product Name</ID>
+              <Name>Product Name</Name>
+              <SourceAttributeID>Product Key</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
       <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
     </Dimension>
     <Dimension>
@@ -637,7 +875,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1684" scrolltop="-1670" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="120" x="10615" y="19433" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1684" scrolltop="-1670" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="120" x="10615" y="19433" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001653e0100065461686f6d61" />
                 </font>
@@ -648,7 +886,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Customer" left="319" top="7400" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4385" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Customer" left="319" top="7400" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="4385" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e00002111000088130000" />
                 </control>
@@ -659,7 +897,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Geography" left="20" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="4984" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Geography" left="20" top="0" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="4984" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e00007813000088130000" />
                 </control>
@@ -670,10 +908,10 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2113" top="4501" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2113" top="4501" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -725,6 +963,55 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
           <Value>120</Value>
         </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+          <Value>
+            <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+              <Shapes NodeWidth="198">
+                <Shape Id="Customer Key" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Customer Key" />
+                    <Attribute Id="Birth Date" />
+                    <Attribute Id="Commute Distance" />
+                    <Attribute Id="Date First Purchase" />
+                    <Attribute Id="English Education" />
+                    <Attribute Id="Email Address" />
+                    <Attribute Id="Gender" />
+                    <Attribute Id="Geography Key" />
+                    <Attribute Id="House Owner Flag" />
+                    <Attribute Id="Marital Status" />
+                    <Attribute Id="Number Cars Owned" />
+                    <Attribute Id="Number Children At Home" />
+                    <Attribute Id="English Occupation" />
+                    <Attribute Id="Phone" />
+                    <Attribute Id="Postal Code" />
+                    <Attribute Id="Total Children" />
+                    <Attribute Id="Yearly Income" />
+                  </Attributes>
+                  <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="City" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="City" />
+                  </Attributes>
+                  <Position x="272" y="20" />
+                </Shape>
+                <Shape Id="State Province Name" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="State Province Name" />
+                  </Attributes>
+                  <Position x="525" y="20" />
+                </Shape>
+                <Shape Id="English Country Region Name" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="English Country Region Name" />
+                  </Attributes>
+                  <Position x="777" y="20" />
+                </Shape>
+              </Shapes>
+            </DiagramLayout>
+          </Value>
+        </Annotation>
       </Annotations>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
@@ -741,7 +1028,7 @@
       <Attributes>
         <Attribute>
           <ID>Customer Key</ID>
-          <Name>Customer Key</Name>
+          <Name>Full Name</Name>
           <Usage>Key</Usage>
           <KeyColumns>
             <KeyColumn>
@@ -752,6 +1039,14 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>152</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimCustomer</TableID>
+              <ColumnID>FullName</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
               <AttributeID>Geography Key</AttributeID>
@@ -818,14 +1113,6 @@
               <Name>City</Name>
             </AttributeRelationship>
             <AttributeRelationship>
-              <AttributeID>State Province Name</AttributeID>
-              <Name>State Province Name</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>English Country Region Name</AttributeID>
-              <Name>English Country Region Name</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
               <AttributeID>Postal Code</AttributeID>
               <Name>Postal Code</Name>
             </AttributeRelationship>
@@ -879,6 +1166,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -895,6 +1183,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -911,6 +1200,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Contacts</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -926,6 +1216,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -941,6 +1232,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -956,12 +1248,13 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
         <Attribute>
           <ID>English Education</ID>
-          <Name>English Education</Name>
+          <Name>Education</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
@@ -972,12 +1265,13 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
         <Attribute>
           <ID>English Occupation</ID>
-          <Name>English Occupation</Name>
+          <Name>Occupation</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
@@ -988,6 +1282,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1004,6 +1299,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1019,6 +1315,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1035,6 +1332,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Contacts</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1066,6 +1364,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Demographic</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1081,14 +1380,6 @@
                 <ColumnID>City</ColumnID>
               </Source>
             </KeyColumn>
-          </KeyColumns>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-        </Attribute>
-        <Attribute>
-          <ID>State Province Name</ID>
-          <Name>State Province Name</Name>
-          <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
               <DataSize>50</DataSize>
@@ -1098,12 +1389,68 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>30</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimGeography</TableID>
+              <ColumnID>City</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>State Province Name</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
+              <Name>State-Province</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <AttributeHierarchyDisplayFolder>Location</AttributeHierarchyDisplayFolder>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>State Province Name</ID>
+          <Name>State-Province</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimGeography</TableID>
+                <ColumnID>StateProvinceName</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimGeography</TableID>
+                <ColumnID>EnglishCountryRegionName</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DimGeography</TableID>
+              <ColumnID>StateProvinceName</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>English Country Region Name</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
+              <Name>Country-Region</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <AttributeHierarchyDisplayFolder>Location</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
         <Attribute>
           <ID>English Country Region Name</ID>
-          <Name>English Country Region Name</Name>
+          <Name>Country-Region</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
@@ -1114,6 +1461,7 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Location</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -1130,10 +1478,40 @@
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <AttributeHierarchyDisplayFolder>Location</AttributeHierarchyDisplayFolder>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Customer Geography</Name>
+          <DisplayFolder>Location</DisplayFolder>
+          <Levels>
+            <Level>
+              <ID>Country-Region</ID>
+              <Name>Country-Region</Name>
+              <SourceAttributeID>English Country Region Name</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>State-Province</ID>
+              <Name>State-Province</Name>
+              <SourceAttributeID>State Province Name</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>City</ID>
+              <Name>City</Name>
+              <SourceAttributeID>City</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Full Name</ID>
+              <Name>Full Name</Name>
+              <SourceAttributeID>Customer Key</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
       <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
     </Dimension>
   </Dimensions>
@@ -1148,7 +1526,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13807" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="29905" y="19433" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13807" scrolltop="6896" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="29905" y="14497" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="010000009001653e0100065461686f6d61" />
                 </font>
@@ -1217,7 +1595,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2112" top="19500" logicalid="17" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1235,7 +1613,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4356" top="16351" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1253,7 +1631,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2112" top="11901" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1271,7 +1649,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4356" top="17451" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1289,7 +1667,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4356" top="16901" logicalid="21" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1307,7 +1685,7 @@
               <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2113" top="4501" logicalid="22" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                   </ddsxmlobj>
                 </control>
                 <layoutobject>
@@ -1345,7 +1723,7 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>-5000</Value>
+          <Value>6896</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -1362,9 +1740,6 @@
       </Annotations>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
-      <Source>
-        <DataSourceViewID>AdventureWorksDW2022</DataSourceViewID>
-      </Source>
       <Dimensions>
         <Dimension>
           <ID>Product</ID>
@@ -1426,6 +1801,11 @@
               <AttributeID>Status</AttributeID>
             </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
         <Dimension>
           <ID>Due Date</ID>
@@ -1434,9 +1814,6 @@
           <Attributes>
             <Attribute>
               <AttributeID>Date Key</AttributeID>
-            </Attribute>
-            <Attribute>
-              <AttributeID>Full Date Alternate Key</AttributeID>
             </Attribute>
             <Attribute>
               <AttributeID>English Month Name</AttributeID>
@@ -1451,6 +1828,11 @@
               <AttributeID>Calendar Semester</AttributeID>
             </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
         <Dimension>
           <ID>Customer</ID>
@@ -1518,6 +1900,11 @@
               <AttributeID>Postal Code</AttributeID>
             </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
         <Dimension>
           <ID>Order Date</ID>
@@ -1528,9 +1915,6 @@
               <AttributeID>Date Key</AttributeID>
             </Attribute>
             <Attribute>
-              <AttributeID>Full Date Alternate Key</AttributeID>
-            </Attribute>
-            <Attribute>
               <AttributeID>English Month Name</AttributeID>
             </Attribute>
             <Attribute>
@@ -1543,6 +1927,11 @@
               <AttributeID>Calendar Semester</AttributeID>
             </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
         <Dimension>
           <ID>Ship Date</ID>
@@ -1553,9 +1942,6 @@
               <AttributeID>Date Key</AttributeID>
             </Attribute>
             <Attribute>
-              <AttributeID>Full Date Alternate Key</AttributeID>
-            </Attribute>
-            <Attribute>
               <AttributeID>English Month Name</AttributeID>
             </Attribute>
             <Attribute>
@@ -1568,6 +1954,11 @@
               <AttributeID>Calendar Semester</AttributeID>
             </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
       </Dimensions>
       <MeasureGroups>
@@ -1589,6 +1980,7 @@
                   <ColumnID>SalesAmount</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Order Quantity</ID>
@@ -1600,6 +1992,7 @@
                   <ColumnID>OrderQuantity</ColumnID>
                 </Source>
               </Source>
+              <FormatString>#,#</FormatString>
             </Measure>
             <Measure>
               <ID>Unit Price</ID>
@@ -1611,10 +2004,11 @@
                   <ColumnID>UnitPrice</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Tax Amt</ID>
-              <Name>Tax Amt</Name>
+              <Name>Tax Amount</Name>
               <Source>
                 <DataType>Double</DataType>
                 <Source xsi:type="ColumnBinding">
@@ -1622,6 +2016,7 @@
                   <ColumnID>TaxAmt</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Discount Amount</ID>
@@ -1633,6 +2028,7 @@
                   <ColumnID>DiscountAmount</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Extended Amount</ID>
@@ -1644,6 +2040,7 @@
                   <ColumnID>ExtendedAmount</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Product Standard Cost</ID>
@@ -1655,10 +2052,11 @@
                   <ColumnID>ProductStandardCost</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Unit Price Discount Pct</ID>
-              <Name>Unit Price Discount Pct</Name>
+              <Name>Unit Price Discount Percentage</Name>
               <Source>
                 <DataType>Double</DataType>
                 <Source xsi:type="ColumnBinding">
@@ -1666,6 +2064,7 @@
                   <ColumnID>UnitPriceDiscountPct</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Percent</FormatString>
             </Measure>
             <Measure>
               <ID>Total Product Cost</ID>
@@ -1677,10 +2076,12 @@
                   <ColumnID>TotalProductCost</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
             <Measure>
               <ID>Internet Sales Count</ID>
               <Name>Internet Sales Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
               <Source>
                 <DataType>Integer</DataType>
                 <DataSize>4</DataSize>
@@ -1688,7 +2089,6 @@
                   <TableID>dbo_FactInternetSales</TableID>
                 </Source>
               </Source>
-              <AggregateFunction>Count</AggregateFunction>
             </Measure>
             <Measure>
               <ID>Freight</ID>
@@ -1700,6 +2100,7 @@
                   <ColumnID>Freight</ColumnID>
                 </Source>
               </Source>
+              <FormatString>Currency</FormatString>
             </Measure>
           </Measures>
           <StorageMode>Molap</StorageMode>
@@ -1709,6 +2110,7 @@
               <CubeDimensionID>Product</CubeDimensionID>
               <Attributes>
                 <Attribute>
+                  <AttributeID>Product Key</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
                       <DataType>Integer</DataType>
@@ -1718,7 +2120,6 @@
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
-                  <AttributeID>Product Key</AttributeID>
                   <Type>Granularity</Type>
                 </Attribute>
               </Attributes>
@@ -1727,6 +2128,7 @@
               <CubeDimensionID>Due Date</CubeDimensionID>
               <Attributes>
                 <Attribute>
+                  <AttributeID>Date Key</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
                       <DataType>Integer</DataType>
@@ -1736,7 +2138,6 @@
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
-                  <AttributeID>Date Key</AttributeID>
                   <Type>Granularity</Type>
                 </Attribute>
               </Attributes>
@@ -1745,6 +2146,7 @@
               <CubeDimensionID>Customer</CubeDimensionID>
               <Attributes>
                 <Attribute>
+                  <AttributeID>Customer Key</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
                       <DataType>Integer</DataType>
@@ -1754,7 +2156,6 @@
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
-                  <AttributeID>Customer Key</AttributeID>
                   <Type>Granularity</Type>
                 </Attribute>
               </Attributes>
@@ -1763,6 +2164,7 @@
               <CubeDimensionID>Order Date</CubeDimensionID>
               <Attributes>
                 <Attribute>
+                  <AttributeID>Date Key</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
                       <DataType>Integer</DataType>
@@ -1772,7 +2174,6 @@
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
-                  <AttributeID>Date Key</AttributeID>
                   <Type>Granularity</Type>
                 </Attribute>
               </Attributes>
@@ -1781,6 +2182,7 @@
               <CubeDimensionID>Ship Date</CubeDimensionID>
               <Attributes>
                 <Attribute>
+                  <AttributeID>Date Key</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
                       <DataType>Integer</DataType>
@@ -1790,7 +2192,6 @@
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
-                  <AttributeID>Date Key</AttributeID>
                   <Type>Granularity</Type>
                 </Attribute>
               </Attributes>
@@ -1815,6 +2216,9 @@
           </Partitions>
         </MeasureGroup>
       </MeasureGroups>
+      <Source>
+        <DataSourceViewID>AdventureWorksDW2022</DataSourceViewID>
+      </Source>
     </Cube>
   </Cubes>
   <DataSources>
@@ -1862,7 +2266,7 @@
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-14190" scrolltop="5139" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="30480" y="20751" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-17525" scrolltop="7652" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="30480" y="15815" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="010000009001653e0100065461686f6d61" />
                       </font>
@@ -1931,7 +2335,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2093" top="4501" logicalid="17" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -1951,7 +2355,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4336" top="16351" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -1969,7 +2373,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4336" top="17451" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -1987,7 +2391,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2092" top="11901" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2005,7 +2409,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4336" top="16901" logicalid="21" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2023,7 +2427,7 @@
                     <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2092" top="19500" logicalid="22" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2039,11 +2443,11 @@
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-                <DiagramViewPortLeft>-14190</DiagramViewPortLeft>
-                <DiagramViewPortTop>5139</DiagramViewPortTop>
+                <DiagramViewPortLeft>-17525</DiagramViewPortLeft>
+                <DiagramViewPortTop>7652</DiagramViewPortTop>
                 <DiagramBoundingLeft>0</DiagramBoundingLeft>
                 <DiagramBoundingTop>0</DiagramBoundingTop>
                 <DiagramZoom>75</DiagramZoom>
@@ -2210,6 +2614,13 @@
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
+                      <xs:element name="FullName" msdata:ReadOnly="true" msprop:DbColumnName="FullName" msprop:IsLogical="True" msprop:ComputedColumnExpression="IIF(MiddleName IS NULL, FirstName + ' ' + LastName, FirstName + ' ' + MiddleName + ' ' + LastName)" msprop:design-time-name="66802280-1885-4240-a667-13826620dd3e" msprop:Description="" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="152" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -2271,6 +2682,34 @@
                       <xs:element name="FiscalQuarter" msprop:FriendlyName="FiscalQuarter" msprop:DbColumnName="FiscalQuarter" msprop:design-time-name="0c1a9bec-1f0a-4dd2-afdc-93c59b0f0d71" type="xs:unsignedByte" />
                       <xs:element name="FiscalYear" msprop:FriendlyName="FiscalYear" msprop:DbColumnName="FiscalYear" msprop:design-time-name="16f778e3-99ad-4edc-82c7-96b970f8ece6" type="xs:short" />
                       <xs:element name="FiscalSemester" msprop:FriendlyName="FiscalSemester" msprop:DbColumnName="FiscalSemester" msprop:design-time-name="2fe8f0fc-1b16-4caa-9112-40efc2a1ed95" type="xs:unsignedByte" />
+                      <xs:element name="SimpleDate" msdata:ReadOnly="true" msprop:DbColumnName="SimpleDate" msprop:IsLogical="True" msprop:ComputedColumnExpression="FORMAT(FullDateAlternateKey, 'yyyy-MM-dd')" msprop:design-time-name="95475f13-60af-4339-9abc-abb07acaf47d" msprop:Description="" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="4000" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="MonthName" msdata:ReadOnly="true" msprop:DbColumnName="MonthName" msprop:IsLogical="True" msprop:ComputedColumnExpression="FORMAT(FullDateAlternateKey, 'MMMM yyyy')" msprop:design-time-name="d76a02f4-01d8-45c5-bab3-5f01bb35ea3f" msprop:Description="" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="4000" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CalendarQuarterDesc" msdata:ReadOnly="true" msprop:DbColumnName="CalendarQuarterDesc" msprop:IsLogical="True" msprop:ComputedColumnExpression="CONCAT('Q', CalendarQuarter, ' CY ', CalendarYear)" msprop:design-time-name="1bcd51d1-56ba-4556-b23a-da96ae90f38b" msprop:Description="">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="15" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CalendarSemesterDesc" msdata:ReadOnly="true" msprop:DbColumnName="CalendarSemesterDesc" msprop:IsLogical="True" msprop:design-time-name="565aedac-7344-4c88-b1bf-3931c1c392a3" msprop:Description="" msprop:ComputedColumnExpression="CONCAT('H', CalendarSemester, ' CY ', CalendarYear)">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="15" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -2522,6 +2961,13 @@
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
+                      <xs:element name="ProductLineName" msdata:ReadOnly="true" msprop:DbColumnName="ProductLineName" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE ProductLine  &#xD;&#xA;   WHEN 'M' THEN 'Mountain'  &#xD;&#xA;   WHEN 'R' THEN 'Road'  &#xD;&#xA;   WHEN 'S' THEN 'Accessory'  &#xD;&#xA;   WHEN 'T' THEN 'Touring'  &#xD;&#xA;   ELSE 'Components'  &#xD;&#xA;END" msprop:design-time-name="5548791a-3221-4057-94fe-9e5848782562" msprop:Description="">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -2598,25 +3044,25 @@
               <xs:field xpath="SalesOrderNumber" />
               <xs:field xpath="SalesOrderLineNumber" />
             </xs:unique>
-            <xs:keyref name="FK_FactInternetSales_DimDate2" refer="dbo_DimDate_Constraint1">
+            <xs:keyref name="FK_FactInternetSales_DimProduct" refer="dbo_DimProduct_Constraint1">
               <xs:selector xpath=".//dbo_FactInternetSales" />
-              <xs:field xpath="ShipDateKey" />
-            </xs:keyref>
-            <xs:keyref name="FK_FactInternetSales_DimDate" refer="dbo_DimDate_Constraint1">
-              <xs:selector xpath=".//dbo_FactInternetSales" />
-              <xs:field xpath="OrderDateKey" />
-            </xs:keyref>
-            <xs:keyref name="FK_FactInternetSales_DimCustomer" refer="Constraint1">
-              <xs:selector xpath=".//dbo_FactInternetSales" />
-              <xs:field xpath="CustomerKey" />
+              <xs:field xpath="ProductKey" />
             </xs:keyref>
             <xs:keyref name="FK_FactInternetSales_DimDate1" refer="dbo_DimDate_Constraint1">
               <xs:selector xpath=".//dbo_FactInternetSales" />
               <xs:field xpath="DueDateKey" />
             </xs:keyref>
-            <xs:keyref name="FK_FactInternetSales_DimProduct" refer="dbo_DimProduct_Constraint1">
+            <xs:keyref name="FK_FactInternetSales_DimCustomer" refer="Constraint1">
               <xs:selector xpath=".//dbo_FactInternetSales" />
-              <xs:field xpath="ProductKey" />
+              <xs:field xpath="CustomerKey" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactInternetSales_DimDate" refer="dbo_DimDate_Constraint1">
+              <xs:selector xpath=".//dbo_FactInternetSales" />
+              <xs:field xpath="OrderDateKey" />
+            </xs:keyref>
+            <xs:keyref name="FK_FactInternetSales_DimDate2" refer="dbo_DimDate_Constraint1">
+              <xs:selector xpath=".//dbo_FactInternetSales" />
+              <xs:field xpath="ShipDateKey" />
             </xs:keyref>
             <xs:keyref name="FK_DimCustomer_DimGeography" refer="dbo_DimGeography_Constraint1">
               <xs:selector xpath=".//dbo_DimCustomer" />
