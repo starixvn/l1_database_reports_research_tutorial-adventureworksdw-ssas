@@ -10,6 +10,7 @@
           <ObjectType>Current</ObjectType>
         </StartObject>
         <TransactionalDeployment>true</TransactionalDeployment>
+        <DeploymentMode>DeployAll</DeploymentMode>
       </Options>
     </Configuration>
     <Configuration>

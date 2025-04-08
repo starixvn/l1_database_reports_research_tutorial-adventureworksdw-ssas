@@ -12,16 +12,13 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Date</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Product</ID>
-      </Dimension>
-      <Dimension>
         <ID>Customer</ID>
       </Dimension>
       <Dimension>
-        <ID>Geography</ID>
+        <ID>Date</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Employee</ID>
       </Dimension>
       <Dimension>
         <ID>Promotion</ID>
@@ -33,7 +30,10 @@
         <ID>Sales Territory</ID>
       </Dimension>
       <Dimension>
-        <ID>Employee</ID>
+        <ID>Geography</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Product</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
