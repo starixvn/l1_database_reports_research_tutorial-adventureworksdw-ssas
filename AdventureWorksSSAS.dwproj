@@ -36,8 +36,8 @@
       <FullPath>Employee.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Geography.dim</Name>
-      <FullPath>Geography.dim</FullPath>
+      <Name>Reseller Geography.dim</Name>
+      <FullPath>Reseller Geography.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Promotion.dim</Name>
@@ -50,6 +50,14 @@
     <ProjectItem>
       <Name>Sales Territory.dim</Name>
       <FullPath>Sales Territory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Internet Sales Order Details.dim</Name>
+      <FullPath>Internet Sales Order Details.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Sales Reason.dim</Name>
+      <FullPath>Sales Reason.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

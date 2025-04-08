@@ -30,10 +30,16 @@
         <ID>Sales Territory</ID>
       </Dimension>
       <Dimension>
+        <ID>Product</ID>
+      </Dimension>
+      <Dimension>
         <ID>Geography</ID>
       </Dimension>
       <Dimension>
-        <ID>Product</ID>
+        <ID>Internet Sales Order Details</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Sales Reason</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -53,6 +59,30 @@
             <Partitions>
               <Partition>
                 <ID>Reseller Sales</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Internet Sales Reason</ID>
+            <Partitions>
+              <Partition>
+                <ID>Internet Sales Reason</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Sales Quota</ID>
+            <Partitions>
+              <Partition>
+                <ID>Sales Quota</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Sales Quota 1</ID>
+            <Partitions>
+              <Partition>
+                <ID>Sales Quota</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>
